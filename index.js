@@ -5,7 +5,8 @@ const dotenv = require('dotenv')
 const router = require('./routes/Router.js')
 const path = require('path')
 const cors = require('cors')
-app.use(cors());
+app.use(cors({origin:"https://shivanshutiari319.github.io"}));
+if(app.get("env")==="production"){app.set('trust proxy',1);}
 const bodyparser= require('body-parser');
 app.use(express.json());
 app.use(bodyparser.urlencoded({extended:false}))
