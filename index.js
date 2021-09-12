@@ -24,7 +24,7 @@ app.get('/',(req,res)=>{
 
 
 
-mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb://shivanshu:trisha@cluster0-shard-00-00.tdefa.mongodb.net:27017,cluster0-shard-00-01.tdefa.mongodb.net:27017,cluster0-shard-00-02.tdefa.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-2o0qu0-shard-0&authSource=admin&retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
     
 app.listen(PORT,(req,res)=>{
